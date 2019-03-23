@@ -4,6 +4,12 @@ You can use the [editor on GitHub](https://github.com/gzalles/LAC19_workshop/edi
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+### Code Highlighting
+
+```cpp
+var s = "CPP syntax highlighting";
+```
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
