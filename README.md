@@ -7,7 +7,19 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 ### Code Highlighting
 
 ```cpp
-var s = "CPP syntax highlighting";
+
+//make 4 write pointers (output)
+auto* outDataW = buffer.getWritePointer (0);
+auto* outDataY = buffer.getWritePointer (1);
+auto* outDataZ = buffer.getWritePointer (2);
+auto* outDataX = buffer.getWritePointer (3);
+
+//make 4 read pointers (input)
+auto* inDataFLU = buffer.getReadPointer (0);
+auto* inDataFRD = buffer.getReadPointer (1);
+auto* inDataBLD = buffer.getReadPointer (2);
+auto* inDataBRU = buffer.getReadPointer (3);
+
 ```
 
 ### Markdown
