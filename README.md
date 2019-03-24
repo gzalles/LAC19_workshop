@@ -1,9 +1,28 @@
 ## LAC 2019 Workshop
 
+### Links
+
+The following are a collection of links I am using in this project. The Spatial Workstation is a great free VST I use for binaural decoding. Wigware is an amazing collection of plug-ins used in this project for multi-channel monitoring. Reaper is the DAW of choice for multi-channel audio and JUCE is the C++ framework used to design these plug-ins. I recommend getting all these tools if you are interested in learning about ambisonic software. Sennheiser also has some valuable free tools.
+
+[Facebook Spatial Workstation](https://facebook360.fb.com/spatial-workstation/)
+[Wigware](https://www.brucewiggins.co.uk/?page_id=78)
+[Reaper](https://www.reaper.fm/)
+[JUCE](https://juce.com/)
+[Sennheiser Ambeo Tools](https://en-us.sennheiser.com/ambeo-blueprints-downloads)
+
 ### Downloads
+
+This is a collection of downloadables I am using to produce these simple ambisonic plug-ins. They include audio and images. JUCE also allows import of 3D models but I have not yet perfected the use of these.
+
 <a href="https://github.com/gzalles/LAC19_workshop/blob/master/mark2.JPG" download>Click to Download FOA Mic Encoder Image</a>
 
-### FoaMicEncAudioProcessorEditor
+### Code Snippets  
+These code snippets are being used to expedite the creation of the plug-ins during the workshop. They are meant to help the reader succeed without any major issues. The code is heavily commented, please read the comments for clarification.
+
+<!-- /////////////////////////////////////////////////////////////// -->
+#### FoaMicEncAudioProcessorEditor
+This code is used in the FOA Microphone Encoder's editor.
+
 ```cpp
 void FoaMicEncAudioProcessorEditor::paint (Graphics& g)
 {
@@ -39,7 +58,9 @@ void FoaMicEncAudioProcessorEditor::paint (Graphics& g)
 }
 ```
 <!-- /////////////////////////////////////////////////////////////// -->
-### FoaMicEncAudioProcessor
+#### FoaMicEncAudioProcessor
+This code is used for the PluginProcessor part of the FOA mic encoder.
+
 ```cpp
 void FoaMicEncAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer& midiMessages)
 {
@@ -94,6 +115,8 @@ void FoaMicEncAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuff
 
 }
 ```
+
+#### foo
 
 <!-- ### Markdown
 
