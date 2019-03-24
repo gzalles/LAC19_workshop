@@ -4,11 +4,11 @@
 
 The following are a collection of links I am using in this project. The Spatial Workstation is a great free VST I use for binaural decoding. Wigware is an amazing collection of plug-ins used in this project for multi-channel monitoring. Reaper is the DAW of choice for multi-channel audio and JUCE is the C++ framework used to design these plug-ins. I recommend getting all these tools if you are interested in learning about ambisonic software. Sennheiser also has some valuable free tools.
 
-[Facebook Spatial Workstation](https://facebook360.fb.com/spatial-workstation/)
-[Wigware](https://www.brucewiggins.co.uk/?page_id=78)
-[Reaper](https://www.reaper.fm/)
-[JUCE](https://juce.com/)
-[Sennheiser Ambeo Tools](https://en-us.sennheiser.com/ambeo-blueprints-downloads)
+[Facebook Spatial Workstation](https://facebook360.fb.com/spatial-workstation/) //
+[Wigware](https://www.brucewiggins.co.uk/?page_id=78) //
+[Reaper](https://www.reaper.fm/) //
+[JUCE](https://juce.com/) //
+[Sennheiser Ambeo Tools](https://en-us.sennheiser.com/ambeo-blueprints-downloads) 
 
 ### Downloads
 
@@ -115,7 +115,7 @@ void FoaMicEncAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuff
 
 }
 ```
-
+<!-- /////////////////////////////////////////////////////////////// -->
 #### foo
 
 <!-- ### Markdown
