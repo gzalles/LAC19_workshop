@@ -38,6 +38,62 @@ void FoaMicEncAudioProcessorEditor::paint (Graphics& g)
     g.drawImageAt (background, imageOffsetX, imageOffsetY);
 }
 ```
+<!-- /////////////////////////////////////////////////////////////// -->
+### FoaMicEncAudioProcessor
+```cpp
+void FoaMicEncAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer& midiMessages)
+{
+    //default JUCE code, leave as is...
+    ScopedNoDenormals noDenormals;
+    auto totalNumInputChannels  = getTotalNumInputChannels();
+    auto totalNumOutputChannels = getTotalNumOutputChannels();
+
+    //clear buffer
+    for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
+        buffer.clear (i, 0, buffer.getNumSamples());
+
+    /* DESCRIPTION
+     This takes 4 channels and spits back out 4 new channels after encoding.
+
+     W = FLU + FRD + BLD + BRU
+     Y = FLU - FRD + BLD - BRU
+     Z = FLU - FRD - BLD + BRU
+     X = FLU + FRD - BLD - BRU
+
+     ordering ACN, normalization SN3D.
+     */
+
+    //make 4 write pointers (output)
+    auto* outDataW = buffer.getWritePointer (0);
+    auto* outDataY = buffer.getWritePointer (1);
+    auto* outDataZ = buffer.getWritePointer (2);
+    auto* outDataX = buffer.getWritePointer (3);
+
+    //make 4 read pointers (input)
+    auto* inDataFLU = buffer.getReadPointer (0);
+    auto* inDataFRD = buffer.getReadPointer (1);
+    auto* inDataBLD = buffer.getReadPointer (2);
+    auto* inDataBRU = buffer.getReadPointer (3);
+
+    //calculate SN3D normalization coefficient
+    //pi declared in header (public), defined in this file (PrepareToPlay())
+    float wNormFactor = sqrt(0.25f*pi);
+
+    //traverse samples
+    for(int index = 0; index < buffer.getNumSamples(); index++) {
+
+        //ACN = W Y Z X
+        outDataW[index] = wNormFactor * (inDataFLU[index] + inDataFRD[index] +
+                                         inDataBLD[index] + inDataBRU[index]);
+
+        outDataY[index] = inDataFLU[index] - inDataFRD[index] + inDataBLD[index] - inDataBRU[index];
+        outDataZ[index] = inDataFLU[index] - inDataFRD[index] - inDataBLD[index] + inDataBRU[index];
+        outDataX[index] = inDataFLU[index] + inDataFRD[index] - inDataBLD[index] - inDataBRU[index];
+
+    }
+
+}
+```
 
 <!-- ### Markdown
 
