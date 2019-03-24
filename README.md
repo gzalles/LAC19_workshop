@@ -1,7 +1,7 @@
 ## LAC 2019 Workshop
 
 ### Downloads
-<a href="mark2.jpg" download>Click to Download</a>
+<a href="https://github.com/gzalles/LAC19_workshop/blob/master/mark2.JPG" download>Click to Download FOA Mic Encoder Image</a>
 
 ### Code Highlighting
 
