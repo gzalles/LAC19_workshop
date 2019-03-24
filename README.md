@@ -3,22 +3,40 @@
 ### Downloads
 <a href="https://github.com/gzalles/LAC19_workshop/blob/master/mark2.JPG" download>Click to Download FOA Mic Encoder Image</a>
 
-### Code Highlighting
-
+### FOA Mic Encoder
 ```cpp
+void FoaMicEncAudioProcessorEditor::paint (Graphics& g)
+{
+    // fill the whole window black
+    g.fillAll (Colours::black);
+    // set the current drawing colour to white
+    g.setColour (Colours::white);
+    // set the font size and draw text to the screen
+    g.setFont (22.0f);
 
-//make 4 write pointers (output)
-auto* outDataW = buffer.getWritePointer (0);
-auto* outDataY = buffer.getWritePointer (1);
-auto* outDataZ = buffer.getWritePointer (2);
-auto* outDataX = buffer.getWritePointer (3);
+    //set some values for fitted text functions
+    int titleHeight = 50;
+    int subTitleOffset = 20;
 
-//make 4 read pointers (input)
-auto* inDataFLU = buffer.getReadPointer (0);
-auto* inDataFRD = buffer.getReadPointer (1);
-auto* inDataBLD = buffer.getReadPointer (2);
-auto* inDataBRU = buffer.getReadPointer (3);
+    //draw the title
+    g.drawFittedText ("FOA Mic Encoder", 0, 0, getWidth(), titleHeight, Justification::centred, 1);
 
+    //change the font size
+    g.setFont (18.0f);
+
+    //draw the subtitle
+    g.drawFittedText ("ACN + SN3D", 0, subTitleOffset, getWidth(), titleHeight, Justification::centred, 1);
+
+    //draw the image from cache
+    Image background = ImageCache::getFromMemory (BinaryData::mark2_JPG, BinaryData::mark2_JPGSize);
+
+    //set values for image offset
+    int imageOffsetX = 56;
+    int imageOffsetY = 60;
+
+    //draw the image on the canvas
+    g.drawImageAt (background, imageOffsetX, imageOffsetY);
+}
 ```
 
 ### Markdown
