@@ -8,13 +8,15 @@ The following are a collection of links I am using in this project. The Spatial 
 [Wigware](https://www.brucewiggins.co.uk/?page_id=78) //
 [Reaper](https://www.reaper.fm/) //
 [JUCE](https://juce.com/) //
-[Sennheiser Ambeo Tools](https://en-us.sennheiser.com/ambeo-blueprints-downloads) 
+[Sennheiser Ambeo Tools](https://en-us.sennheiser.com/ambeo-blueprints-downloads)
 
 ### Downloads
 
 This is a collection of downloadables I am using to produce these simple ambisonic plug-ins. They include audio and images. JUCE also allows import of 3D models but I have not yet perfected the use of these.
 
 <a href="https://github.com/gzalles/LAC19_workshop/blob/master/mark2.JPG" download>Click to Download FOA Mic Encoder Image</a>
+
+<a href="https://github.com/gzalles/LAC19_workshop/blob/master/foaMicEnc.zip" download>Click to Download FOA Mic Encoder Image</a>
 
 ### Code Snippets  
 These code snippets are being used to expedite the creation of the plug-ins during the workshop. They are meant to help the reader succeed without any major issues. The code is heavily commented, please read the comments for clarification.
