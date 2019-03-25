@@ -16,7 +16,7 @@ This is a collection of downloadables I am using to produce these simple ambison
 
 <a href="https://github.com/gzalles/LAC19_workshop/blob/master/mark2.JPG" download>Click to Download FOA Mic Encoder Image</a>
 
-<a href="https://github.com/gzalles/LAC19_workshop/blob/master/foaMicEnc.zip" download>Click to Download FOA Mic Encoder Image</a>
+<a href="https://github.com/gzalles/LAC19_workshop/blob/master/foaMicEnc.zip" download>Click to Download FOA Mic Encoder Reaper Session</a>
 
 ### Code Snippets  
 These code snippets are being used to expedite the creation of the plug-ins during the workshop. They are meant to help the reader succeed without any major issues. The code is heavily commented, please read the comments for clarification.
