@@ -14,6 +14,9 @@ The following are a collection of links I am using in this project. The Spatial 
 
 This is a collection of downloadables I am using to produce these simple ambisonic plug-ins. They include audio and images. JUCE also allows import of 3D models but I have not yet perfected the use of these.
 
+<a href="https://github.com/gzalles/LAC19_workshop/blob/master/LAC19workshop.pdf" download>Click to Download Slides</a>
+
+
 <a href="https://github.com/gzalles/LAC19_workshop/blob/master/mark2.JPG" download>Click to Download FOA Mic Encoder Image</a>
 
 <a href="https://github.com/gzalles/LAC19_workshop/blob/master/foaMicEnc.zip" download>Click to Download FOA Mic Encoder Reaper Session</a>
