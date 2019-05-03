@@ -16,7 +16,6 @@ This is a collection of downloadables I am using to produce these simple ambison
 
 <a href="https://github.com/gzalles/LAC19_workshop/blob/master/LAC19workshop.pdf" download>Click to Download Slides</a>
 
-
 <a href="https://github.com/gzalles/LAC19_workshop/blob/master/mark2.JPG" download>Click to Download FOA Mic Encoder Image</a>
 
 <a href="https://github.com/gzalles/LAC19_workshop/blob/master/foaMicEnc.zip" download>Click to Download FOA Mic Encoder Reaper Session</a>
